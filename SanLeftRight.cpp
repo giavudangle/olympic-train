@@ -34,7 +34,7 @@ void LeftRight(int l,int r){
     is_prime_1.set();
     is_prime_2.set();
     for (int i=2;i<=can;i++){
-        if (is_prime[i]) {
+        if (is_prime_1[i]) {
             for (int j=i*i;j<=can;j+=i){
                 is_prime_1[j]=false;
 
