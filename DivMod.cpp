@@ -8,7 +8,7 @@ long long Mod(string a,long long b){
     long long r=0;
 
     for (int i=0;i<a.size();i++){
-        int so=a[i] + 48;
+        int so=a[i] - 48;
         r=(r*10+so)%b;
     }
     return r;
