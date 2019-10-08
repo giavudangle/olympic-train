@@ -8,7 +8,7 @@ long long Mod(string a,long long b){
     long long r=0;
 
     for (int i=0;i<a.size();i++){
-        int so=a[i] - 48;
+        int so=a[i] + 48;
         r=(r*10+so)%b;
     }
     return r;
@@ -34,10 +34,23 @@ long long PowerRecursion(long long a,long long n){
 
 
 
+long long PowerMod(long long a,long long n,long long m){
+    a=a%m;
+   long long ans=1;
+    while(n>0){
+        if(n&1==1)
+        a=(a*a)%m;
+        n=n>>1;
+    }
+    return ans;
+}
+
+
+
 
 int main(){
     //cout << Power(2,50);
     //cout << Mod("11",3);
-    //cout << PowerRecursion(2,10);
+
     return 0;
 }
